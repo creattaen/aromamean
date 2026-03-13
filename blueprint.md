@@ -33,6 +33,8 @@ I will offer two options for deployment:
 
 ## Action Steps (Current Phase)
 
-1. [ ] **Git Setup**: Add and commit all files to the local repository.
-2. [ ] **Wrangler Deployment**: Guide the user through the `npx wrangler pages deploy` process for immediate deployment.
-3. [ ] **GitHub Setup (Optional)**: Provide guidance on pushing to GitHub for automated deployments.
+1. [x] **Git Commit**: Committed current project state to the local repository.
+2. [x] **GitHub Connection**: Added `https://github.com/creattaen/aromamean.git` as a remote.
+3. [ ] **GitHub Push (User Action Required)**: User to run `git push -u origin main` in their local terminal to complete the upload.
+4. [ ] **Cloudflare Integration**: User to connect GitHub repository to Cloudflare Pages for automated deployments.
+5. [ ] **Syncing Updates**: Push to GitHub after every major change for automatic updates.
