@@ -1,0 +1,11 @@
+# Logs
+*.log
+firebase-debug.log
+
+# IDE
+.vscode/
+.idx/
+
+# OS
+.DS_Store
+Thumbs.db
