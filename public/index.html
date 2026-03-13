@@ -53,15 +53,14 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
-      background: rgba(250, 248, 243, 0.96);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(250, 248, 243, 0.98);
       border-bottom: 1px solid rgba(34, 56, 24, 0.10);
       height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 56px;
+      will-change: transform;
     }
 
     .nav-brand {
@@ -161,8 +160,7 @@
       display: none;
       position: fixed;
       top: 72px; left: 0; right: 0;
-      background: rgba(250, 248, 243, 0.98);
-      backdrop-filter: blur(16px);
+      background: #faf8f3;
       border-bottom: 1px solid rgba(34, 56, 24, 0.10);
       padding: 20px 24px 28px;
       z-index: 999;
@@ -206,6 +204,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      contain: paint;
     }
 
     .hero-bg {
@@ -214,11 +213,7 @@
       background-image: url('aromamean/use3.png');
       background-size: cover;
       background-position: center 38%;
-      transform: scale(1.03);
-      transition: transform 8s ease;
     }
-
-    .hero:hover .hero-bg { transform: scale(1.0); }
 
     .hero-overlay {
       position: absolute;
@@ -1416,7 +1411,6 @@
             <li>교재 포함</li>
             <li>자격증 발급비 포함</li>
             <li>실습 재료 제공</li>
-            <li>수료 후 직접 가르칠 수 있어요</li>
           </ul>
         </div>
       </div>
