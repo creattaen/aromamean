@@ -120,7 +120,7 @@
     .nav-links li a:hover { color: var(--forest); }
 
     .nav-cta-btn {
-      background: var(--forest) !important;
+      background: linear-gradient(135deg, #1a2e12, var(--forest-mid)) !important;
       color: var(--cream-light) !important;
       padding: 9px 22px !important;
       font-size: 12px !important;
@@ -131,7 +131,7 @@
     }
 
     .nav-cta-btn:hover {
-      background: var(--forest-mid) !important;
+      background: linear-gradient(135deg, #223818, #3b6228) !important;
       transform: translateY(-1px);
     }
 
@@ -186,7 +186,7 @@
 
     .nav-mobile-cta {
       margin-top: 16px !important;
-      background: var(--forest) !important;
+      background: linear-gradient(135deg, #1a2e12, var(--forest-mid)) !important;
       color: #fff !important;
       text-align: center !important;
       padding: 14px !important;
@@ -373,7 +373,7 @@
       position: absolute;
       bottom: 28px;
       right: -18px;
-      background: var(--forest);
+      background: linear-gradient(145deg, #1a2e12 0%, #223818 50%, #2d4e1f 100%);
       color: #fff;
       padding: 20px 24px;
       text-align: center;
@@ -505,7 +505,7 @@
 
     .c-card-dark-img {
       height: 240px;
-      background: linear-gradient(150deg, var(--forest) 0%, #3b6228 100%);
+      background: linear-gradient(150deg, #0f1e0a 0%, #223818 45%, #3b6228 80%, #2a4a1a 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -588,7 +588,10 @@
 
     /* ── FOR WHO ──────────────────────────── */
     .for-who {
-      background: var(--forest);
+      background:
+        radial-gradient(ellipse at 15% 60%, rgba(45,78,31,0.65) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 15%, rgba(34,60,20,0.55) 0%, transparent 50%),
+        linear-gradient(155deg, #0d1a08 0%, #1b3111 28%, #223818 58%, #1a2d10 100%);
       padding: 112px 0;
     }
 
@@ -731,7 +734,7 @@
 
     .sch-table { width: 100%; border-collapse: collapse; }
 
-    .sch-table thead tr { background: var(--forest); }
+    .sch-table thead tr { background: linear-gradient(90deg, #1c3213 0%, #223818 50%, #2d4e1f 100%); }
 
     .sch-table thead th {
       color: #fff;
@@ -766,7 +769,7 @@
     }
 
     .pricing-card {
-      background: var(--forest);
+      background: linear-gradient(145deg, #162b0f 0%, #223818 42%, #2a4320 78%, #1c3112 100%);
       padding: 46px 42px;
       border-radius: 2px;
     }
@@ -940,8 +943,8 @@
     .connect-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.14); }
 
     .connect-btn-insta {
-      background: linear-gradient(135deg, #e1306c 0%, #833ab4 55%, #fd1d1d 100%);
-      color: #fff;
+      background: var(--forest);
+      color: var(--cream-light);
     }
 
     .connect-btn-phone {
@@ -1069,10 +1072,10 @@
 
     /* ── STATS ENHANCEMENT ───────────────────── */
     .stat-num {
-      background: linear-gradient(135deg, var(--forest), var(--forest-mid));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--forest);
+      line-height: 1.15;
+      padding-top: 4px;
+      overflow: visible;
     }
 
     /* ── PRICING CARDS ───────────────────────── */
@@ -1120,10 +1123,9 @@
     .connect-btn svg { width: 18px; height: 18px; }
 
     .connect-btn-kakao {
-      background: #FEE500;
-      color: #3A1D1D;
+      background: var(--forest);
+      color: var(--cream-light);
     }
-    .connect-btn-kakao:hover { background: #ffd900; }
 
     /* ── FLOATING BUTTONS ─────────────────── */
     .floating-contacts {
@@ -1162,8 +1164,8 @@
     }
 
     .float-btn-insta {
-      background: linear-gradient(135deg, #e1306c 0%, #833ab4 55%, #fd1d1d 100%);
-      color: #fff;
+      background: var(--forest);
+      color: var(--cream-light);
     }
 
     .float-btn-phone {
@@ -1172,8 +1174,8 @@
     }
 
     .float-btn-kakao {
-      background: #FEE500;
-      color: #3A1D1D;
+      background: var(--forest);
+      color: var(--cream-light);
     }
 
     /* ══════════════════════════════════════
@@ -1529,6 +1531,7 @@
             <li>교재 포함</li>
             <li>자격증 발급비 포함</li>
             <li>실습 재료 제공</li>
+            <li>수료 후 무한 청강 가능</li>
             <li>한국힐링아로마협회 공인</li>
           </ul>
         </div>
