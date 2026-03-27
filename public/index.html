@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aroma Mean — 아로마 지도자 2급 자격과정</title>
+  <title>Aroma Mean — 아로마 자격증반 · 취미반</title>
   <!-- Noto Sans KR + Nanum Square + Montserrat + Plus Jakarta Sans + Roboto (Google Fonts) -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Nanum+Square:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <!-- Pretendard (jsdelivr CDN) -->
@@ -933,7 +933,7 @@
       font-size: 13px;
       font-weight: 500;
       letter-spacing: 0.05em;
-      border-radius: 4px;
+      border-radius: 50px;
       transition: transform 0.20s, box-shadow 0.20s;
     }
 
@@ -1021,6 +1021,110 @@
       letter-spacing: 0.02em;
     }
 
+    /* ── ENHANCED CARD QUALITY ──────────────── */
+    .c-card {
+      box-shadow: 0 2px 16px rgba(34,56,24,0.08);
+      transition: transform 0.32s cubic-bezier(.25,.8,.25,1), box-shadow 0.32s;
+    }
+    .c-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 36px rgba(34,56,24,0.14);
+    }
+
+    .who-card {
+      transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .who-card:hover {
+      background: rgba(255,255,255,0.10);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    }
+
+    /* ── NAV ENHANCEMENT ─────────────────────── */
+    nav {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 24px rgba(34,56,24,0.07);
+    }
+
+    /* ── HERO BUTTON ENHANCEMENT ─────────────── */
+    .btn-gold {
+      border-radius: 50px;
+      box-shadow: 0 4px 18px rgba(160,124,34,0.30);
+    }
+    .btn-gold:hover { box-shadow: 0 8px 28px rgba(160,124,34,0.42); }
+    .btn-ghost { border-radius: 50px; }
+
+    /* ── SECTION VISUAL DEPTH ─────────────────── */
+    .about { background: linear-gradient(180deg, var(--cream-light) 0%, #f7f3ec 100%); }
+    .curriculum { background: linear-gradient(180deg, #f2ede3 0%, var(--cream) 100%); }
+    .cta-section { background: linear-gradient(180deg, var(--cream-dark) 0%, #e5dfd4 100%); }
+
+    .gold-line {
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      width: 44px;
+      height: 2px;
+      border-radius: 2px;
+    }
+
+    /* ── STATS ENHANCEMENT ───────────────────── */
+    .stat-num {
+      background: linear-gradient(135deg, var(--forest), var(--forest-mid));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── PRICING CARDS ───────────────────────── */
+    .pricing-card {
+      box-shadow: 0 8px 40px rgba(14,26,10,0.25);
+    }
+    .pricing-cards-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .pricing-card-hobby {
+      background: linear-gradient(135deg, #2d4e1f 0%, var(--forest) 100%);
+      border: 1px solid rgba(201,168,76,0.35);
+      padding: 32px 36px;
+      border-radius: 2px;
+    }
+    .hobby-badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.20);
+      border: 1px solid rgba(201,168,76,0.45);
+      color: var(--gold-light);
+      font-family: var(--f-ui);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      padding: 4px 10px;
+      margin-bottom: 12px;
+    }
+    .pricing-hobby-amount {
+      font-family: var(--f-display);
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    /* ── CONNECT BUTTONS UNIFIED ─────────────── */
+    .connect-btn {
+      border-radius: 50px;
+      padding: 14px 26px;
+      font-size: 13.5px;
+      letter-spacing: 0.04em;
+    }
+    .connect-btn svg { width: 18px; height: 18px; }
+
+    .connect-btn-kakao {
+      background: #FEE500;
+      color: #3A1D1D;
+    }
+    .connect-btn-kakao:hover { background: #ffd900; }
+
     /* ── FLOATING BUTTONS ─────────────────── */
     .floating-contacts {
       position: fixed;
@@ -1065,6 +1169,11 @@
     .float-btn-phone {
       background: var(--forest);
       color: var(--cream-light);
+    }
+
+    .float-btn-kakao {
+      background: #FEE500;
+      color: #3A1D1D;
     }
 
     /* ══════════════════════════════════════
@@ -1147,6 +1256,9 @@
       .footer-brand { flex-direction: column; align-items: center; gap: 10px; }
       .footer-brand-text { align-items: center; text-align: center; }
 
+      .pricing-cards-grid { gap: 12px; }
+      .pricing-card-hobby { padding: 26px 22px; }
+
       /* Floating buttons — 아이콘만 */
       .floating-contacts { bottom: 20px; right: 16px; gap: 8px; }
       .float-btn { padding: 12px; border-radius: 50%; }
@@ -1191,6 +1303,7 @@
     <a href="#about"      onclick="closeMenu()">소개</a>
     <a href="#curriculum" onclick="closeMenu()">커리큘럼</a>
     <a href="#schedule"   onclick="closeMenu()">수업정보</a>
+    <a href="https://open.kakao.com/o/sGskXwni" target="_blank" onclick="closeMenu()" style="color:var(--gold);">카카오 오픈채팅</a>
     <a href="#contact"    onclick="closeMenu()" class="nav-mobile-cta">수강 문의</a>
   </div>
 
@@ -1199,11 +1312,12 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="hero-label">AROMA MEAN &nbsp;·&nbsp; 아로마 지도자 2급 자격과정</span>
+      <span class="hero-label">AROMA MEAN &nbsp;·&nbsp; 자격증반 &amp; 취미반 운영 중</span>
       <h1 class="hero-title">향기가<br><em>일상이</em> 되는 순간</h1>
       <p class="hero-subtitle">
         에센셜오일로 배우는 나만의 천연 향기 라이프스타일.<br>
-        이론, 블렌딩, 감정 아로마까지 — 소수 인원으로 천천히, 제대로 배웁니다.
+        전문 자격증을 준비하는 분도, 취미로 즐기고 싶은 분도 환영합니다.<br>
+        소수 인원으로 천천히, 제대로 배웁니다.
       </p>
       <div class="hero-buttons">
         <a href="#schedule" class="btn-gold">수강 신청하기</a>
@@ -1259,7 +1373,10 @@
       <div class="curriculum-header">
         <span class="label-tag">CURRICULUM</span>
         <h2 class="section-title">수업 커리큘럼</h2>
-        <p class="section-body">아로마 지도자 2급 자격과정 · 생활 속 아로마 6주 과정</p>
+        <p class="section-body">
+          자격증반(아로마 지도자 2급 · 6주 과정) &amp; 취미반 운영 중<br>
+          두 과정 모두 동일한 커리큘럼으로, 목표에 맞게 선택하세요.
+        </p>
       </div>
       <div class="cards-grid">
 
@@ -1400,9 +1517,10 @@
         </table>
       </div>
 
-      <div>
+      <div class="pricing-cards-grid">
+
         <div class="pricing-card">
-          <span class="pricing-label">TUITION</span>
+          <span class="pricing-label">자격증반</span>
           <p class="pricing-course">아로마 지도자 2급</p>
           <div class="pricing-amount">470,000<sub>원</sub></div>
           <p class="pricing-note">교재 · 자격증 발급비 모두 포함</p>
@@ -1411,8 +1529,24 @@
             <li>교재 포함</li>
             <li>자격증 발급비 포함</li>
             <li>실습 재료 제공</li>
+            <li>한국힐링아로마협회 공인</li>
           </ul>
         </div>
+
+        <div class="pricing-card pricing-card-hobby">
+          <span class="hobby-badge">HOBBY CLASS</span>
+          <span class="pricing-label">취미반</span>
+          <p class="pricing-course">생활 속 아로마 취미과정</p>
+          <div class="pricing-hobby-amount">별도 문의</div>
+          <p class="pricing-note">부담 없이 향기를 즐기고 싶은 분을 위한 과정</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-list">
+            <li>자격증 없이 수강 가능</li>
+            <li>블렌딩 · DIY 실습 포함</li>
+            <li>일정 · 비용 상담 가능</li>
+          </ul>
+        </div>
+
       </div>
 
     </div>
@@ -1456,13 +1590,17 @@
       </div>
 
       <div class="connect-buttons">
+        <a href="https://open.kakao.com/o/sGskXwni" target="_blank" class="connect-btn connect-btn-kakao">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3C6.477 3 2 6.597 2 11.05c0 2.9 1.748 5.452 4.374 6.997L5.22 21.87c-.083.302.244.548.512.384l4.303-2.793c.645.1 1.305.154 1.965.154 5.523 0 10-3.597 10-8.05S17.523 3 12 3z"/></svg>
+          카카오 오픈채팅
+        </a>
         <a href="https://www.instagram.com/aroma_mean/" target="_blank" class="connect-btn connect-btn-insta">
-          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          인스타그램 방문
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          인스타그램
         </a>
         <a href="tel:+821063489297" class="connect-btn connect-btn-phone">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          전화 연결하기
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          전화 연결
         </a>
       </div>
     </div>
@@ -1487,11 +1625,15 @@
   <!-- ── FLOATING CONTACT BUTTONS ─────────── -->
   <div class="floating-contacts">
     <a href="https://www.instagram.com/aroma_mean/" target="_blank" class="float-btn float-btn-insta">
-      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
       <span class="float-label">@aroma_mean</span>
     </a>
+    <a href="https://open.kakao.com/o/sGskXwni" target="_blank" class="float-btn float-btn-kakao">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.477 3 2 6.597 2 11.05c0 2.9 1.748 5.452 4.374 6.997L5.22 21.87c-.083.302.244.548.512.384l4.303-2.793c.645.1 1.305.154 1.965.154 5.523 0 10-3.597 10-8.05S17.523 3 12 3z"/></svg>
+      <span class="float-label">오픈채팅</span>
+    </a>
     <a href="tel:+821063489297" class="float-btn float-btn-phone">
-      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
       <span class="float-label">010.6348.9297</span>
     </a>
   </div>
